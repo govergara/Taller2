@@ -101,6 +101,7 @@ public class upload extends HttpServlet {
                 System.out.println(f);
                 f.addFoto(photo);
                 request.setAttribute("mensaje", "Guardado exitosamente");
+                Modelo.getInstance().writeData(this.getServletContext().getRealPath("datos.xml"));
             }catch(Exception e){
                 request.setAttribute("mensaje", "Ups! "+e.getMessage());
             }

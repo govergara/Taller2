@@ -12,7 +12,9 @@
 package Modelo;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;         // |
 import java.io.IOException;          // |\ Librerías
@@ -58,7 +60,7 @@ public class FileRead {
             Element rootNode = document.getRootElement();
 
             //Se obtiene la lista de hijos de la raiz 'tables'
-            List list = rootNode.getChildren( "familias" );
+            List list = rootNode.getChildren() ;
             //Se recorre la lista de hijos de 'tables'
             for ( int i = 0; i < list.size(); i++ )
             {
@@ -90,9 +92,8 @@ public class FileRead {
                     else if(campo.getName().equals("Fotografia")){
                         String path = campo.getChildTextTrim("path");
                         String comentario = campo.getChildTextTrim("comentario");
-
                         Fotografia f = new Fotografia(path,comentario);
-                        //aux.addFotografia(f);
+                        aux.addFoto(f);
                     }
                 }
                 fam.add(aux);
@@ -113,11 +114,9 @@ public class FileRead {
         return this.fam;
     }
     
-    public void escribir(){
+  public void escribir(){
         try{
             Element company = new Element("familias");
-            Document doc = new Document(company);
-            doc.setRootElement(company);
             for (int i = 0; i <fam.size(); i++) {
                 Element familia = new Element("Familia");
                 Familia aux = fam.get(i);
@@ -137,15 +136,16 @@ public class FileRead {
                     fotos.addContent(new Element("comentario").setText(f.get(j).getComentario()));
                     familia.addContent(fotos);
                 }
-                doc.getRootElement().addContent(familia);
+                company.addContent(familia);
             }
+                // new XMLOutputter().output(doc, System.out);
             XMLOutputter xmlOutput = new XMLOutputter();
 
             // display nice nice
             xmlOutput.setFormat(Format.getPrettyFormat());
-            xmlOutput.output(doc, new FileWriter(file));
+            xmlOutput.output ( new Document(company), new FileOutputStream(file) );
         }catch(Exception e){
-            
+            System.out.println(e.getMessage());
         }
     }
     

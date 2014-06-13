@@ -22,6 +22,7 @@ public class Modelo {
     
     private static Modelo instance;
     private ArrayList<Familia> familias;
+    private String lastPath;
     
     private Modelo(){
         this.familias = new ArrayList<>();
@@ -55,8 +56,8 @@ public class Modelo {
         FileRead datos;
         datos = new FileRead(path);
         datos.leer();
-        System.out.println(datos.getFamilias());
         this.familias = datos.getFamilias();
+        this.lastPath = path;
     }
     
     public void writeData(String path){
@@ -64,6 +65,11 @@ public class Modelo {
         datos = new FileRead(path);
         datos.setFamilias(familias);
         datos.escribir();
+        this.lastPath = path;
+    }
+    
+    protected void finalize(){
+        this.writeData(this.lastPath);
     }
     
     

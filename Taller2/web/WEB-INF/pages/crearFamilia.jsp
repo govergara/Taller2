@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nombre</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="nombre">
+                  <input type="text" class="form-control" name="nombre" required>
                 </div>
             </div>
             <div class="form-group">

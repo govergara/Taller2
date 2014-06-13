@@ -14,8 +14,14 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/extra.css">
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.rut.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/css/bootstrap/js/bootstrap.js"></script>
-        
+        <script type="text/javascript">
+             $(document).ready(function(){
+                 $(".rut").rut();
+             })
+            
+        </script>
     </head>
     <body>
            <div class="container">

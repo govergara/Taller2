@@ -24,13 +24,13 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">RUT</label>
                             <div class="col-sm-10">
-                                <input type="text" name="rut" class="form-control" placeholder="Ejemplo: 11.111.111-1">
+                                <input type="text" name="rut" class="form-control rut" placeholder="Ejemplo: 11.111.111-1" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" name="clave" placeholder="Password">
+                                <input type="password" class="form-control" name="clave" placeholder="Password" required>
                                 <%
                                   Object error = request.getAttribute("error");
                                  if(error != null){

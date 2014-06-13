@@ -20,21 +20,21 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nombre</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="nombre">
+                  <input type="text" class="form-control" name="nombre" required>
                 </div>
             </div>
             
              <div class="form-group">
                 <label class="col-sm-2 control-label">Clave</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" name="clave">
+                  <input type="password" class="form-control" name="clave" required>
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="col-sm-2 control-label">RUT</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="rut">
+                  <input type="text" class="form-control rut" name="rut" required>
                 </div>
             </div>
             

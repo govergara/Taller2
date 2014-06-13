@@ -97,7 +97,6 @@ public class SistemFamilia extends HttpServlet {
                 request.setAttribute("error", "Datos no válidos");
             }
         }
-        request.setAttribute("error", "Familia no existe");
         processRequest(request, response);
     }
 

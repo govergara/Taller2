@@ -19,7 +19,10 @@ public class Fotografia {
     
     public Fotografia(String path, String comentario){
         this.path = path;
-        this.comentario = comentario;
+        if(comentario.length() > 100)
+            this.comentario = comentario.substring(0, 99);
+        else
+            this.comentario = comentario;
     }
     
     public String getPath(){
@@ -35,11 +38,11 @@ public class Fotografia {
     }
     
     public boolean setComentario(String comentario){
-        if(comentario.length() <= 100){
+        if(comentario.length() > 100)
+            this.comentario = comentario.substring(0, 99);
+        else
             this.comentario = comentario;
-            return true;
-        }else
-            return false;
+        return true;
     }
     
 }

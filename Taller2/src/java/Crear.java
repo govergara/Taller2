@@ -73,6 +73,7 @@ public class Crear extends HttpServlet {
             MiembroFamilia miembro = new MiembroFamilia(nombre, rut, clave);
             f.addMiembro(miembro);
             request.setAttribute("mensaje", "Guardado exitosamente");
+            Modelo.getInstance().writeData(this.getServletContext().getRealPath("datos.xml"));
         }catch(Exception e){
             request.setAttribute("mensaje", "Ups! error mientras creabamos el miembro de la familia");
         }

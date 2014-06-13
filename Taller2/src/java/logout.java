@@ -49,6 +49,7 @@ public class logout extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Modelo.Modelo.getInstance().writeData(this.getServletContext().getRealPath("datos.xml"));
         HttpSession sesion = request.getSession();
         while(sesion.getAttributeNames().hasMoreElements()){
             sesion.removeAttribute(sesion.getAttributeNames().nextElement());

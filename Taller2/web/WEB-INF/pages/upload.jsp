@@ -7,13 +7,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <div class='container'>
-    <% out.println(request.getAttribute("url"));%>
+    <% out.println(request.getAttribute("mensaje"));%>
     <div class='col-sm-12'>
         <form class="form-horizontal" role="form" method='post' enctype="multipart/form-data">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Foto:</label>
                 <div class="col-sm-10">
-                  <input type="file" class="form-control" name="foto">
+                  <input type="file" class="form-control" name="foto" required>
                 </div>
             </div>
             <div class="form-group">
