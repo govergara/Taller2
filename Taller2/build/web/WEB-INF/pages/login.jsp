@@ -8,7 +8,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Familia</label>
                             <div class="col-sm-10">
-                                <select class='form-control'>
+                                <select class='form-control' name="familia">
                                     <%
                                         int i;
                                         Familia tmp;
@@ -24,13 +24,20 @@
                         <div class="form-group">
                             <label for="inputEmail3" class="col-sm-2 control-label">RUT</label>
                             <div class="col-sm-10">
-                                <input type="text" name="rut" class="form-control" id="rut" placeholder="Ejemplo: 11.111.111-1">
+                                <input type="text" name="rut" class="form-control" placeholder="Ejemplo: 11.111.111-1">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" name="clave" placeholder="Password">
+                                <%
+                                  Object error = request.getAttribute("error");
+                                 if(error != null){
+                                     String msg = error.toString();
+                                     out.println("<span class='help-block'>"+ msg +"</span>");
+                                 }
+                                %>
                             </div>
                         </div>
                         <div class="form-group">

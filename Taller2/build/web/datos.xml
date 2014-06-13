@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<familias>
+	<familia nombre="perez">
+		<MiembroFamilia>
+			<nombre>Juan</nombre>
+			<rut>11.111.111-1</rut>
+			<clave>root</clave>
+		</MiembroFamilia>
+		<MiembroFamilia>
+			<nombre>Emilio</nombre>
+			<rut>22.222.222-2</rut>
+			<clave>root</clave>
+		</MiembroFamilia>
+		<MiembroFamilia>
+			<nombre>Anastasia</nombre>
+			<rut>33.333.333-3</rut>
+			<clave>root</clave>
+		</MiembroFamilia>
+		<Fotografia>
+			<path>FICHERO</path>
+			<comentario>asdasd</comentario>
+		</Fotografia>
+	</familia>
+	<familia nombre="gonzalez">
+		<MiembroFamilia>
+			<nombre>Juan</nombre>
+			<rut>12.111.111-1</rut>
+			<clave>root</clave>
+		</MiembroFamilia>
+		<Fotografia>
+			<path>cachito</path>
+			<comentario>adssaddasas</comentario>
+		</Fotografia>
+		<MiembroFamilia>
+			<nombre>Emilio</nombre>
+			<rut>23.222.222-2</rut>
+			<clave>root</clave>
+		</MiembroFamilia>
+		<MiembroFamilia>
+			<nombre>Anastasia</nombre>
+			<rut>34.333.333-3</rut>
+			<clave>root</clave>
+		</MiembroFamilia>
+	</familia>
+</familias>	

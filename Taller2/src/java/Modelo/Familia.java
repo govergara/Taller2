@@ -17,18 +17,28 @@ public class Familia {
     private String nombre;
     
     private ArrayList<MiembroFamilia> miembros;
+    private ArrayList<Fotografia> fotos;
     
     public Familia(String n){
         this.nombre = n;
         this.miembros = new ArrayList<>();
+        this.fotos = new ArrayList<>();
     }
     
     public void addMiembro(MiembroFamilia miembro){
         this.miembros.add(miembro);
     }
     
+    public void addFoto(Fotografia f){
+        this.fotos.add(f);
+    }
+    
     public ArrayList<MiembroFamilia> getMiembros(){
         return this.miembros;
+    }
+    
+    public ArrayList<Fotografia> getFotos(){
+        return this.fotos;
     }
     
     public String getNombre(){
@@ -48,6 +58,12 @@ public class Familia {
                return true;
         }
         return false;
+    }
+    
+    
+    @Override
+    public String toString(){
+        return "Familia: "+this.getNombre();
     }
     
 }

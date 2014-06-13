@@ -21,8 +21,10 @@
            <div class="container">
                 <div class="header">
                     <ul class="nav nav-pills pull-right">
-                        <li class="active"><a href="#">Inicio</a></li>
-                        <li><a href="#">Fotografias</a></li>
+                        <li class="active"><a href="/Taller2/SistemFamilia">Inicio</a></li>
+                        <li><a href="/Taller2/Crear">Crear Miembros</a></li>
+                        <li><a href="/Taller2/CrearFamilia">Crear Familia</a></li>
+                        <li><a href="/Taller2/logout">Salir</a></li>
                     </ul>
                     <h3 class="text-muted">Sistema Fotografias</h3>
                 </div>
